@@ -2,7 +2,7 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/app/index.js'],
+  entry: [path.resolve(__dirname,'src','app','index.js')],
   output: {
     path: path.resolve(__dirname,'..','public'),
     filename: 'bundle.js'
@@ -18,8 +18,8 @@ module.exports = {
           path.resolve(__dirname, 'src')
         ],
         loader: "babel-loader",
-        presets: ['es2015', 'react'],
-        exclude: /(node_modules|bower_components)/
+        presets: ["react","es2015","stage-2"],
+        exclude: /(node_modules)/
       },
       {   test: /\.html$/, loader: "raw-loader"   }
     ]

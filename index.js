@@ -6,14 +6,16 @@ import bodyParser from 'body-parser';
 import route from './route';
 // Config
 import config from './config.js';
-
+// Util
+import path from 'path';
 let configProfile = config.dev;
 
 // Set middleware
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extend: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Set route
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', route);
 
 

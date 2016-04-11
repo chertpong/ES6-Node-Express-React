@@ -1,5 +1,17 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import { render } from 'react-dom';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import { API_URL } from './config';
+import App from './component/App';
+import Home from './component/home/Home.js';
 
-ReactDom.render('React component here', document.querySelector('#app'));
+render(
+  (
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home}/>
+    </Route>
+  </Router>
+  )
+  , document.querySelector('#app')
+);
