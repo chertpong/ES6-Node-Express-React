@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import Upload from './../upload/Upload';
+import './style.scss';
 
+export default class Home extends React.Component {
 
-const Home = (props) => (
-  <div className="home">
-    <input type="file" name="upload" />
-  </div>
-);
+  constructor(props){
+    super(props);
+    this.state = {};
+  }
+  
+  render(){
+    return (
+      <div className="home">
+        <Upload />
+      </div>
+    );
+  }
+}
+Home.propTypes = {
 
-export default Home;
+};
+Home.defaultProps = {
+
+};
