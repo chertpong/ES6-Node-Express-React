@@ -49,7 +49,8 @@ export default class Upload extends React.Component {
         </figure>
       );
     }
-
+    // TODO : line 57, it doesn't support method and binding in constructor as usual. Only god knows why
+    // Hour(s) spent to fix it : 1 hour(s)
     return (
         <form className="uploadForm" onSubmit={this._handleImageSubmit}>
           <input type="file" name="upload" className="uploadForm__input" onChange={this._handleImageChange} />
