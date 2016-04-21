@@ -5,7 +5,10 @@ import AppBar from 'material-ui/lib/app-bar';
 const Navbar = (props)=> {
   return (
     <AppBar title="Cake">
-      <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
+     <ul className="navbar__list">
+       <li className="navbar__list-item"><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
+       <li className="navbar__list-item"><NavLink to="/products">Products</NavLink></li>
+     </ul>
     </AppBar>
   );
 };

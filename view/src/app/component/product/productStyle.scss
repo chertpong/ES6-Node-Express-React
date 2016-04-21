@@ -1,0 +1,12 @@
+.product-item__card {
+  margin: 0 15px 15px 0;
+  &-media {
+    img {
+      width: 280px !important;;
+      height: 300px !important;
+    }
+  }
+  &-description {
+    margin-top: -20px;
+  }
+}

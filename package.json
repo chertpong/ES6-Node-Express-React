@@ -7,13 +7,14 @@
     "start": "babel-node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "cd view && webpack",
-    "webpack-dev": "cd view && webpack-dev-server --content-base ../public"
+    "webpack-dev": "cd view && webpack-dev-server --history-api-fallback --content-base ../public"
   },
   "author": "chertpong_h <chertpong_h@cmu.ac.th>",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
+    "flexboxgrid": "^6.3.0",
     "material-design-icons": "^2.2.3",
     "material-ui": "^0.14.4",
     "mongoose": "^4.4.12",
